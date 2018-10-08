@@ -6,7 +6,7 @@
           "value": "Standard_LRS"
       },
       "vmName": {
-          "value": "kristianshevandoVM"
+          "value": "kristianVM"
       },
       "vmSize": {
           "value": "Standard_A2"
