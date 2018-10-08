@@ -10,6 +10,12 @@
       },
       "dnsLabelPrefix": {
         "value": "kristiandns"
-      }
+      },
+      "vmName": {
+        "value": "kristianshevandovm"
+      },
+      "modulesUrl": {
+        "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
+      },
     }
   }
