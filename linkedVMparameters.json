@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
       "diskType": {
-          "value": "StandardSSD_LRS"
+          "value": "Standard_LRS"
       },
       "vmName": {
           "value": "kristianshevandoVM"
