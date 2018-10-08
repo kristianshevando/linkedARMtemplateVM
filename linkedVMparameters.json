@@ -1,21 +1,30 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-      "adminUsername": {
-        "value": "kristianshevando"
-      },
-      "adminPassword": {
-        "value": "Pa$$w0rd"
-      },
-      "dnsLabelPrefix": {
-        "value": "kristiandns"
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+      "diskType": {
+          "value": "StandardSSD_LRS"
       },
       "vmName": {
-        "value": "kristianshevandovm"
+          "value": "kristianshevandoVM"
+      },
+      "vmSize": {
+          "value": "Standard_A2"
+      },
+      "imageSKU": {
+          "value": "2016-Datacenter"
+      },
+      "adminUsername": {
+          "value": "kristian"
+      },
+      "adminPassword": {
+          "value": ""
       },
       "modulesUrl": {
-        "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
+          "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
       },
-    }
+      "configurationFunction": {
+          "value": "ContosoWebsite.ps1\\ContosoWebsite"
+      }
   }
+}
