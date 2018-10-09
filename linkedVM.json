@@ -214,7 +214,7 @@
         "autoUpgradeMinorVersion": true,
         "forceUpdateTag": "1.1",
         "settings": {
-          "modulesUrl": "https://github.com/kristianshevando/dscExtensionforExistingVM/raw/master/dscExtension.zip",
+          "modulesUrl": "https://github.com/kristianshevando/dscExtensionforExistingVM/raw/master/dscExtension2.zip",
           "wmfVersion": "latest",
           "xWebsite": "dscExtension.ps1\\MainHTTPWebsite"
         }
