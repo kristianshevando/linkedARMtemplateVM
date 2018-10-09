@@ -202,25 +202,6 @@
       "tags": {}
     },
     {
-      "apiVersion": "2015-06-15",
-      "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "[concat(parameters('vmName'),'/Microsoft.Powershell.DSC')]",
-      "location": "[resourceGroup().location]",
-      "dependsOn": ["[concat(parameters('vmName'))]"],
-      "properties": {
-        "publisher": "Microsoft.Powershell",
-        "type": "DSC",
-        "typeHandlerVersion": "2.26",
-        "autoUpgradeMinorVersion": true,
-        "forceUpdateTag": "1.1",
-        "settings": {
-          "modulesUrl": "https://github.com/kristianshevando/dscExtensionforExistingVM/raw/master/dscExtension2.zip",
-          "wmfVersion": "latest",
-          "xWebsite": "dscExtension.ps1\\MainHTTPWebsite"
-        }
-      }
-    },
-    {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('vmName'),'/', variables('vmExtensionName'))]",
       "apiVersion": "2015-05-01-preview",
