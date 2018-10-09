@@ -5,9 +5,6 @@
       "networkSecurityGroupName": {
           "value": "comp1-nsg"
       },
-      "networkInterfaceName": {
-        "value": "comp1404"
-      },
       "diskType": {
           "value": "Standard_LRS"
       },
@@ -87,41 +84,12 @@
             }
         ]
       },
-      "subnetName": {
-          "value": "Front-end"
-      },
-      "publicIpAddressName": {
-          "value": "comp1-ip"
-      },
-      "publicIpAddressType": {
-          "value": "Dynamic"
-      },
-      "publicIpAddressSku": {
-          "value": "Basic"
-      },
-      "virtualMachineName": {
-          "value": "comp1"
-      },
-      "virtualMachineRG": {
-          "value": "Minsk"
-      },
-      "osDiskType": {
-          "value": "Premium_LRS"
-      },
-      "virtualMachineSize": {
-          "value": "Standard_D2s_v3"
-      },
+     
       "virtualNetworkId": {
         "value": "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.Network/virtualNetworks/KristianShevandoVNET"
       },
       "modulesUrl": {
           "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
-      },
-      "diagnosticsStorageAccountName": {
-          "value": "kristianshevandooo"
-      },
-      "diagnosticsStorageAccountId": {
-          "value": "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.Storage/storageAccounts/kristianshevandooo"
       },
       "configurationFunction": {
           "value": "ContosoWebsite.ps1\\ContosoWebsite"
