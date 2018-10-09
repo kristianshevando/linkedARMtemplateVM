@@ -6,7 +6,7 @@
           "value": "comp1-nsg"
       },
       "diskType": {
-          "value": "Standard_LRS"
+          "value": "Premium_LRS"
       },
       "vmName": {
           "value": "kristianVM"
