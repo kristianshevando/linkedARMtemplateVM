@@ -12,7 +12,7 @@
           "value": "kristianVM"
       },
       "vmSize": {
-          "value": "Standard_A2"
+          "value": "Standard_D2s_v3"
       },
       "imageSKU": {
           "value": "2016-Datacenter"
@@ -85,7 +85,7 @@
         ]
       },
       "modulesUrl": {
-          "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
+          "value": "https://github.com/kristianshevando/linkedARMtemplateVM/raw/master/ContosoWebsite.ps1.zip"
       },
       "configurationFunction": {
           "value": "ContosoWebsite.ps1\\ContosoWebsite"
