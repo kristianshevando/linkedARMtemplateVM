@@ -84,10 +84,6 @@
             }
         ]
       },
-     
-      "virtualNetworkId": {
-        "value": "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.Network/virtualNetworks/KristianShevandoVNET"
-      },
       "modulesUrl": {
           "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
       },
