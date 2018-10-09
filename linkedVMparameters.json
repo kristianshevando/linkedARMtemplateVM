@@ -2,6 +2,12 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+      "networkSecurityGroupName": {
+          "value": "comp1-nsg"
+      },
+      "networkInterfaceName": {
+        "value": "comp1404"
+      },
       "diskType": {
           "value": "Standard_LRS"
       },
@@ -18,10 +24,104 @@
           "value": "kristian"
       },
       "adminPassword": {
-          "value": "Pa$$w0rd"
+        "reference":  {
+            "keyVault":  {
+              "id":  "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.KeyVault/vaults/kristianVault"
+              },
+            "secretName":  "kristianVmPassword"
+         }
+      },
+      "networkSecurityGroupRules": {
+        "value": [
+            {
+                "name": "HTTP",
+                "properties": {
+                    "priority": 300,
+                    "protocol": "TCP",
+                    "access": "Allow",
+                    "direction": "Inbound",
+                    "sourceAddressPrefix": "*",
+                    "sourcePortRange": "*",
+                    "destinationAddressPrefix": "*",
+                    "destinationPortRange": "80"
+                }
+            },
+            {
+                "name": "TaskIn",
+                "properties": {
+                    "priority": 410,
+                    "protocol": "TCP",
+                    "access": "Allow",
+                    "direction": "Inbound",
+                    "sourceAddressPrefix": "*",
+                    "sourcePortRange": "*",
+                    "destinationAddressPrefix": "*",
+                    "destinationPortRange": "8080"
+                }
+            },
+            {
+                "name": "RDPIn",
+                "properties": {
+                    "priority": 420,
+                    "protocol": "TCP",
+                    "access": "Allow",
+                    "direction": "Inbound",
+                    "sourceAddressPrefix": "*",
+                    "sourcePortRange": "*",
+                    "destinationAddressPrefix": "*",
+                    "destinationPortRange": "3389"
+                }
+            },
+            {
+                "name": "RDPOut",
+                "properties": {
+                    "priority": 430,
+                    "protocol": "TCP",
+                    "access": "Allow",
+                    "direction": "Outbound",
+                    "sourceAddressPrefix": "*",
+                    "sourcePortRange": "3389",
+                    "destinationAddressPrefix": "*",
+                    "destinationPortRange": "*"
+                }
+            }
+        ]
+      },
+      "subnetName": {
+          "value": "Front-end"
+      },
+      "publicIpAddressName": {
+          "value": "comp1-ip"
+      },
+      "publicIpAddressType": {
+          "value": "Dynamic"
+      },
+      "publicIpAddressSku": {
+          "value": "Basic"
+      },
+      "virtualMachineName": {
+          "value": "comp1"
+      },
+      "virtualMachineRG": {
+          "value": "Minsk"
+      },
+      "osDiskType": {
+          "value": "Premium_LRS"
+      },
+      "virtualMachineSize": {
+          "value": "Standard_D2s_v3"
+      },
+      "virtualNetworkId": {
+        "value": "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.Network/virtualNetworks/KristianShevandoVNET"
       },
       "modulesUrl": {
           "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
+      },
+      "diagnosticsStorageAccountName": {
+          "value": "kristianshevandooo"
+      },
+      "diagnosticsStorageAccountId": {
+          "value": "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.Storage/storageAccounts/kristianshevandooo"
       },
       "configurationFunction": {
           "value": "ContosoWebsite.ps1\\ContosoWebsite"

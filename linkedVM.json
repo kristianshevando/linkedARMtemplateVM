@@ -2,6 +2,12 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "networkSecurityGroupRules": {
+      "type": "array"
+    },
+    "networkSecurityGroupName": {
+      "type": "string"
+    },
     "diskType": {
       "type": "string",
       "defaultValue": "Standard_LRS",
@@ -184,6 +190,16 @@
           ]
         }
       }
+    },
+    {
+      "name": "[parameters('networkSecurityGroupName')]",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2018-08-01",
+      "location": "[parameters('location')]",
+      "properties": {
+          "securityRules": "[parameters('networkSecurityGroupRules')]"
+      },
+      "tags": {}
     },
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
