@@ -70,6 +70,9 @@
         "description": "DSC configuration function to call"
       }
     },
+    "xWebsite": {
+      "type": "string"
+    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
@@ -217,6 +220,7 @@
         "settings": {
           "ModulesUrl": "[parameters('modulesUrl')]",
           "ConfigurationFunction": "[parameters('configurationFunction')]",
+          "xWebsite": "[parameters('xWebsite')]",
           "Properties": {
             "MachineName": "[parameters('vmName')]"
           }
