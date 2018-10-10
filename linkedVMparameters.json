@@ -85,10 +85,10 @@
         ]
       },
       "modulesUrl": {
-          "value": "https://github.com/kristianshevando/linkedARMtemplateVM/raw/master/ContosoWebsite.ps1.zip"
+          "value": "https://github.com/kristianshevando/linkedARMtemplateVM/raw/master/dscConfiguration.ps1.zip"
       },
       "configurationFunction": {
-          "value": "ContosoWebsite.ps1\\ContosoWebsite"
+          "value": "dscConfiguration.ps1\\kristianDscConfiguration"
       }
   }
 }
