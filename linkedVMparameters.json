@@ -89,10 +89,6 @@
       },
       "configurationFunction": {
           "value": "ContosoWebsite.ps1\\ContosoWebsite"
-      },
-      "xWebsite": {
-          "value": "ContosoWebsite.ps1\\MainHTTPWebsite"
       }
-
   }
 }
